@@ -1,0 +1,55 @@
+#%RAML 1.0 Library
+types:
+  Table: !include sql.table.raml
+  Type: !include sql.type.raml
+  RELATION: !include sql.relation.raml
+  STRING:
+    type: Type
+    sql.type: STRING
+  STRING.BINARY:
+    type: Type
+    sql.type: STRING.BINARY
+  TEXT:
+    type: Type
+    sql.type: STRING
+  INTEGER:
+    type: Type
+    sql.type: INTEGER
+  BIGINT:
+    type: Type
+    sql.type: BIGINT
+  FLOAT:
+    type: Type
+    sql.type: FLOAT
+  REAL:
+    description: REAL (PostgreSQL only)
+    type: Type
+    sql.type: REAL
+  DOUBLE:
+    type: Type
+    sql.type: DOUBLE
+  DECIMAL:
+    type: Type
+    sql.type: DECIMAL
+  DATE:
+    description: DATETIME for mysql / sqlite, TIMESTAMP WITH TIME ZONE for postgres
+    type: Type
+    sql.type: DATE
+  DATEONLY:
+    description: Date without time
+    type: Type
+    sql.type: DATEONLY
+  BOOLEAN:
+    type: Type
+    sql.type: BOOLEAN
+  JSON:
+    description: PostgreSQL only
+    type: Type
+    sql.type: JSON
+  JSONB:
+    description: PostgreSQL only
+    type: Type
+    sql.type: JSON
+  UUID:
+    type: Type
+    sql.type: UUID

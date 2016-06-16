@@ -1,0 +1,94 @@
+#%RAML 1.0 ObjectTypeDeclaration
+properties:
+  isEmail:
+    description: checks for email format (foo@bar.com)
+    type: boolean
+    required: false
+  isUrl:
+    description: checks for url format (http://foo.com)
+    type: boolean
+    required: false
+  isIP:
+    description: checks for IPv4 (129.89.23.1) or IPv6 format
+    type: boolean
+    required: false
+  isIPv4:
+    description: checks for IPv4 (129.89.23.1)
+    type: boolean
+    required: false
+  isIPv6:
+    description: checks for IPv6 format
+    type: boolean
+    required: false
+    default: false
+  isAlpha:
+    description: will only allow letters
+    type: boolean
+    required: false
+  isAlphanumeric:
+    description: will only allow alphanumeric characters, so "_abc" will fail
+    type: boolean
+    required: false
+  isNumeric:
+    description: will only allow numbers
+    type: boolean
+    required: false
+  isInt:
+    description: checks for valid integers
+    type: boolean
+    required: false
+  isFloat:
+    description: checks for valid floating point numbers
+    type: boolean
+    required: false
+  isDecimal:
+    description: checks for any numbers
+    type: boolean
+    required: false
+  isLowercase:
+    description: checks for lowercase
+    type: boolean
+    required: false
+  isUppercase:
+    description: checks for uppercase
+    type: boolean
+    required: false
+  notNull:
+    description: won't allow null
+    type: boolean
+    required: false
+  isNull:
+    description: only allows null
+    type: boolean
+    required: false
+  notEmpty:
+    description: don't allow empty strings
+    type: boolean
+    required: false
+  equals:
+    description: only allow a specific value
+    type: boolean
+    required: false
+    default: false
+  contains:
+    description: force specific substrings
+    type: boolean
+    required: false
+  notContains:
+    description: don't allow specific substrings
+    type: boolean
+    required: false
+  len:
+    description: only allow values with length between x and y
+    type: array
+    example: [1, 10]
+    required: false
+  isUUID:
+    description: only allow uuids
+    type: integer
+    example: 4
+    required: false
+  isDate:
+    description: only allow date strings
+    type: boolean
+    required: false

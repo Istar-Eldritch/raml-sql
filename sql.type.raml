@@ -1,0 +1,24 @@
+#%RAML 1.0 ObjectTypeDeclaration
+facets:
+  sql.type:
+    type: string
+    required: true
+  sql.extra:
+    type: array
+    default: []
+    required: false
+  primary_key:
+    type: boolean
+    required: false
+  foreign_key:
+    type: !include sql.table.raml
+    required: false
+  unique:
+    type: boolean
+    required: false
+  allow_null:
+    type: boolean
+    required: false
+  validate:
+    type: !include validations.raml
+    required: false
